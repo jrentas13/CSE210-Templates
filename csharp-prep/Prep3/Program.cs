@@ -4,14 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        // // Create an instance of the Random class and generate a random number between 1 and 100.
-        // Random randomGenerator = new Random();
-        // int randomNumber = randomGenerator.Next(1, 100);
-
         // Initialize variable for the do while loop
         string response = "yes";
-        // int guess = 0;
-        // List<int> guesses = new();
 
         // Create a do while loop that loops over the guessing game once, and then continues
         // to loop over if the user wants to continue playing.
