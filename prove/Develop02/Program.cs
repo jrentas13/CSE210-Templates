@@ -82,14 +82,5 @@ class Program
 
 
         }while (userInput != 5);
-        
-
-        // myJournal.WriteEntry();
-
-        // myJournal.DisplayEntries();
-
-        // SavetoFile(myJournal._entries);
-
-        // myJournal._entries = LoadFile();
     }
 }
