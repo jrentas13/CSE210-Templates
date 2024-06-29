@@ -1,0 +1,4 @@
+2000
+Simple~Take a test~Get an A~1000~True
+Eternal~Read my scriptures~1 chapter everyday~200
+Checklist~Go to the temple~Perform any ordinance~500~1000~3~2~False
