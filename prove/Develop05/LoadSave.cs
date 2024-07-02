@@ -20,7 +20,7 @@ public class LoadSave
         }
     }
 
-    public void LoadGoals(List<Game> goalList, int score)
+    public int LoadGoals(List<Game> goalList)
     {
         Console.WriteLine("What file would you like to load (example.txt): ");
         _filename = Console.ReadLine();
@@ -32,7 +32,7 @@ public class LoadSave
             Console.WriteLine("The file is empty.");
         }
 
-        score = int.Parse(lines[0]);
+        goalList.Clear();
 
         for (int i = 1; i < lines.Length; i++)
         {
@@ -53,5 +53,7 @@ public class LoadSave
                 goalList.Add(new Checklist(parts[1], parts[2], int.Parse(parts[3]), int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6])));
             }
         }
+        int score = int.Parse(lines[0]);
+        return score;
     }
 }

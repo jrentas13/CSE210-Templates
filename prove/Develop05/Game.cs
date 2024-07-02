@@ -19,4 +19,5 @@ public abstract class Game
     public abstract void GoalComplete();
 
     public abstract string GetStringRepresentation();
+
 }

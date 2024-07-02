@@ -18,7 +18,6 @@ class Program
         {
             Console.Clear();
             Console.WriteLine($"Your Score: {score}\n");
-
             Console.WriteLine("The Game of Success");
             Console.WriteLine(" 1. Quest Selection");
             Console.WriteLine(" 2. Current Quests");
@@ -47,21 +46,18 @@ class Program
                             Simple simpleQuest = new Simple();
                             simpleQuest.CreateGoal();
                             profile.Add(simpleQuest);
-                            Console.WriteLine(" ");
                             break;
                         case 2:
                             Console.Clear();
                             Eternal eternalQuest = new Eternal();
                             eternalQuest.CreateGoal();
                             profile.Add(eternalQuest);
-                            Console.WriteLine(" ");
                             break;
                         case 3:
                             Console.Clear();
                             Checklist checklistQuest = new Checklist();
                             checklistQuest.CreateGoal();
                             profile.Add(checklistQuest);
-                            Console.WriteLine(" ");
                             break;
                         default:
                             Console.WriteLine("\nInvalid quest selection.\n");
@@ -69,8 +65,6 @@ class Program
                     }
                     break;
                 case 2:
-                    Console.Clear();
-                    
                     int i = 1;
                     Console.WriteLine("\nActive Quests:");
                     foreach (Game quest in profile)
@@ -79,13 +73,13 @@ class Program
                         quest.Display();
                         i++;
                     }
-                    Console.WriteLine(" ");
+                    Thread.Sleep(5000);
                     break;
                 case 3:
                     account.SaveGoals(profile, score);
                     break;
                 case 4:
-                    account.LoadGoals(profile, score);
+                    score = account.LoadGoals(profile);
                     break;
                 case 5:
                     Console.Clear();
