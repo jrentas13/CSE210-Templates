@@ -1,0 +1,2 @@
+The program will ask the user the kind of plant they are keeping track of, it's species, how often and how much it should be watered.
+The user should have access to this infomation prior to using the program.
