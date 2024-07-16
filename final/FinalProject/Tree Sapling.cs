@@ -61,6 +61,7 @@ public class Tree : Plant
         Console.WriteLine(" -Daily");
         Console.WriteLine(" -Weekly");
         Console.WriteLine(" -Monthly");
+        Console.Write(">");
         _wateringFrequency = Console.ReadLine();
 
         Console.Write("How many times should it be watered: ");
@@ -79,7 +80,7 @@ public class Tree : Plant
 
     public override void Display()
     {
-        Console.WriteLine($"{_name} ({_species}) \n{_fruitTree} - {_fruit} \n{_wateringFrequency} watering, {_timesWatered}/{_wateringNeeded}");
+        Console.WriteLine($"{_name} ({_species}) \n- {_fruitTree} - {_fruit} \n- {_wateringFrequency} watering, {_timesWatered}/{_wateringNeeded}\n-{_careInstructions}-");
     }
 
     public override string GetStringRepresentation()

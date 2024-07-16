@@ -25,7 +25,7 @@ public class SaveLoad
         }
     }
 
-    public void Load(List<Plant> plantList, List<Reminder> reminderList)
+    public string Load(List<Plant> plantList, List<Reminder> reminderList)
     {
         Console.WriteLine("What File would you like to load (example.txt):");
         _filename = Console.ReadLine();
@@ -60,8 +60,10 @@ public class SaveLoad
             }
             if (type == "Reminder")
             {
-                reminderList.Add(new Reminder());
+                reminderList.Add(new Reminder(parts[1], parts[2]));
             }
         }
+        string user = lines[0];
+        return user;
     }
 }
