@@ -8,8 +8,9 @@ public class Reflecting: Activity
 
     public void ReflectionActivity()
     {
-        DateTime endTime = StartDisplay(startMessage);
+        _duration = StartDisplay(startMessage);
 
+        int end = _duration / 5;
 
         Console.WriteLine("Here we go...");
         Console.WriteLine("Here's something to reflect on:");
@@ -19,7 +20,7 @@ public class Reflecting: Activity
         Console.WriteLine("When you are ready, press enter.");
         string go = Console.ReadLine();
 
-        while (startTime < endTime)
+        for (int i = end; end > 0; end--)
         {
             Prompt("ReflectionSubPrompts.txt");
 

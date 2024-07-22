@@ -18,13 +18,17 @@ public class Breathing : Activity
 
     public void BreatheActivity()
     {
-        DateTime endTime = StartDisplay(startMessage);
+        _duration  = StartDisplay(startMessage);
+
+        int end = _duration / 10;
 
         Console.WriteLine("Empty your mind...");
 
         AnimationCountdown(3);
 
-        while (startTime < endTime)
+        Console.WriteLine("\n");
+
+        for (int i = end; end > 0; end--)
         {
             Breathe();
         }

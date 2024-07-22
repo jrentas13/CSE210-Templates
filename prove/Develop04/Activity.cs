@@ -2,22 +2,22 @@ public class Activity
 {
     protected string _endMessage = "Nice Job! You have finsihed the activity.";
 
-    protected DateTime startTime = DateTime.Now;
-
-    protected DateTime endTime;
+    protected int _duration;
 
     public void AnimationCountdown(int seconds)
     {
-        for (int i = 0; i < seconds; i++)
+        for (int i = seconds; i > 0; i--)
         {
-            Console.Write("+");
+            Console.Write(" +");
 
             Thread.Sleep(500);
 
             Console.Write("\b \b");
-            Console.Write("x");
+            Console.Write(" x");
 
             Thread.Sleep(500);
+
+            Console.Write("\b \b");
         }
     }
 
@@ -41,17 +41,15 @@ public class Activity
         Console.WriteLine(prompts[randomInt]);
     }
 
-    public DateTime StartDisplay(string message)
+    public int StartDisplay(string message)
     {
         Console.WriteLine($"{message} \n");
 
         Console.WriteLine("Enter a time limit:");
 
-        int timeSec = int.Parse(Console.ReadLine());
+        int duration = int.Parse(Console.ReadLine());
 
-        DateTime endTime = startTime.AddSeconds(timeSec);
-
-        return endTime;
+        return duration;
     }
 
     public void Display(string message)
